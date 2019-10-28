@@ -7,7 +7,9 @@ services:
     build: .
     environment:
       - MODE=dev
-      - SERVER_URL='http://admin:pass@db.scanitive.ryan-gordon.me:5984'
+      - server_url="<host>:<port>"
+      - admin_username="<username>"
+      - admin_password="<password>"
     volumes:
       - .:/code
    

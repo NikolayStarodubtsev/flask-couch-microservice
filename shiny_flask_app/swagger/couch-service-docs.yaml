@@ -21,7 +21,7 @@ paths:
       - admins
       security:
         - basicAuth: []
-      operationId: api.products.create_product
+      operationId: shiny_flask_app.api.products.create_product
       consumes:
       - application/json
       produces:
@@ -43,7 +43,7 @@ paths:
     put:
       tags:
       - admins
-      operationId: api.products.update_product
+      operationId: shiny_flask_app.api.products.update_product
       consumes:
       - application/json
       produces:
@@ -66,7 +66,7 @@ paths:
       get:
         tags:
         - public
-        operationId: api.products.read_product
+        operationId: shiny_flask_app.api.products.read_product
         parameters:
           - in: path
             name: prod_id
@@ -89,7 +89,7 @@ paths:
             type: string
             required: true
             description: Numeric ID of the user to get.    
-        operationId: api.products.delete_product
+        operationId: shiny_flask_app.api.products.delete_product
         responses:
           200:
             description: Successfully deleted product 
