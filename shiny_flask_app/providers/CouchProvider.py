@@ -76,7 +76,10 @@ class CouchProvider(object):
         # Step 2; Check the password provided by the user.
         if bcrypt.hashpw(flask.request.authorization.password.encode('utf8'),
                          self.hashed) == self.hashed:
-            couch = couchdb.Server(os.environ['server_url'])
+            couch = couchdb.Server('http://{}:{}@{}'.format(
+                self.admin_username,
+                flask.request.authorization.password,
+                self.server_url))
             print("It matches")
             try:
                 db = couch['products']
