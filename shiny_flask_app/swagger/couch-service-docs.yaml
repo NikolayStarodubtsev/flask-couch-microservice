@@ -19,8 +19,8 @@ paths:
     post:
       tags:
       - admins
-      security:
-        - basicAuth: []
+        # security:
+        #   - basicAuth: []
       operationId: shiny_flask_app.api.products.create_product
       consumes:
       - application/json
@@ -81,8 +81,8 @@ paths:
       delete:
         tags:
         - admins
-        security:
-        - basicAuth: []
+          # security:
+          # - basicAuth: []
         parameters:
           - in: path
             name: prod_id
